@@ -1,0 +1,306 @@
+/* Root Variables */
+/* Root Variables */
+:root {
+    --primary-dark: #131515;       /* Deep Dark */
+    --secondary-dark: #2b2c28;     /* Dark Olive Gray */
+    --accent-dark: rgb(30, 126, 112);        /* Teal Green */
+    --accent-light: #f39c12;       /* Mint */
+    --text-light: #fffafb;         /* Soft White for text */
+    --transition-speed: 0.3s;
+    --font-main: 'Arial', sans-serif;
+}
+
+  
+  /* Base Styles */
+  body {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    color: var(--text-light);
+    background: var(--primary-dark);
+    line-height: 1.7;
+  }
+  
+  /* Smooth Transitions */
+  * {
+    transition: color var(--transition-speed), background var(--transition-speed), transform var(--transition-speed);
+  }
+  
+  /* Header */
+  header {
+    background: var(--secondary-dark);
+    color: var(--text-light);
+    padding: 3rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+    border-bottom: 5px solid var(--accent-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+  }
+  
+  p {
+    font-size: 1.4rem;
+    color: var(--text-light);
+    max-width: 750px;
+    margin: 1rem auto;
+  }
+  
+  /* Navigation Links */
+  nav a {
+    margin: 0 1.5rem;
+    color: var(--text-light);
+    text-decoration: none; /* No underline */
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+  }
+  
+  nav a:hover {
+    background: var(--accent-light);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  /* Specific Dashboard Links - No underline */
+  #user-dashboard, #business-dashboard, .dashboard-link {
+    text-decoration: none !important; /* Ensures no underline */
+  }
+  
+  #user-dashboard:hover, #business-dashboard:hover, .dashboard-link:hover {
+    text-decoration: none !important; /* No underline on hover */
+  }
+  
+  /* Buttons */
+  .button, button {
+    padding: 1rem 2.2rem;
+    background-color: var(--accent-dark);
+    color: var(--text-light);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+  }
+  
+  .button:hover, button:hover {
+    background-color: var(--accent-light);
+    color: var(--primary-dark);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+    transform: translateY(-3px) scale(1.05);
+  }
+  
+  /* Main Content */
+  main {
+    padding: 4rem;
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.9);
+    max-width: 900px;
+    margin: 2rem auto;
+    text-align: center;
+  }
+  
+  /* Sections */
+  section {
+    padding: 3rem 1rem;
+    background-color: var(--secondary-dark); /* Slightly darker for sections */
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    color: var(--text-light);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    border-top: 3px solid var(--accent-dark);
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  
+  /* Links in Footer */
+  footer a {
+    color: var(--accent-light);
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: var(--secondary-dark);
+  }
+  
+  /* Modal Styling */
+  #announcement-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95); /* Darker overlay */
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn var(--transition-speed) ease-in;
+  }
+  
+  .modal-content {
+    background: var(--primary-dark);
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    color: var(--text-light);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.9);
+  }
+  
+  #close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--accent-light);
+  }
+  
+  /* Keyframes for FadeIn Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+
+  
+/* Remove underline from all links by default */
+a {
+  text-decoration: none;
+  }
+  
+  /* Specifically target User Dashboard and Business Dashboard */
+#user-dashboard, #business-dashboard, .dashboard-link {
+  text-decoration: none !important; /* Ensures no underline */
+  }
+  
+#user-dashboard:hover, #business-dashboard:hover, .dashboard-link:hover {
+  text-decoration: none !important; /* No underline on hover */
+  }
+  .token-balance {
+    margin-bottom: 30px;
+}
+
+.balance {
+    font-size: 2em;
+    color: #f39c12;
+    animation: bounce 1s infinite;
+}
+
+.shop-container {
+  display: flex;
+  gap: 20px;
+  animation: scroll-loop 16s linear infinite;
+  /* Adjusted width to accommodate both original and duplicate boxes */
+  width: calc(250px * 16 + 300px); /* 16 boxes with gaps */
+}
+
+.shop-box {
+  background-color: #f39c12;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 250px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.shop-box img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.shop-box span {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+@keyframes scroll-loop {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%); /* Moves one full set of boxes to the left */
+  }
+}
+
+.shop-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.token-balance {
+  margin-bottom: 30px;
+}
+
+.balance {
+  font-size: 2em;
+  color: #f39c12;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-20px);
+  }
+  60% {
+      transform: translateY(-10px);
+  }
+}
+
+.recent-transactions {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.recent-transactions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-transactions li {
+  padding: 10px;
+  border-bottom: 1px solid #dddddd;
+  transition: background 0.3s;
+}
+
+.recent-transactions li:hover {
+  background-color: #f39c12;
+  color: white;
+}

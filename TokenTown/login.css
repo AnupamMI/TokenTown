@@ -1,0 +1,126 @@
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b7cbe1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form styles */
+.form {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 85vw;
+    transition: box-shadow 0.3s ease;
+}
+
+.form:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 350px;
+}
+
+/* Close button style */
+.close {
+    color: #888;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close:hover {
+    color: #555;
+}
+
+/* Field styles */
+.field {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+/* Input field styles */
+.input-field {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-field:focus {
+    border-color: #266969;
+    box-shadow: 0 0 4px rgba(38, 105, 105, 0.2);
+    outline: none;
+}
+
+/* Button styles */
+.button {
+    background-color: #266969;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+    background-color: #021f3c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button container style */
+.btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .form {
+        padding: 15px;
+        width: 80%;
+    }
+
+    .button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
